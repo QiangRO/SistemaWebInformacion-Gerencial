@@ -7,7 +7,7 @@ if ($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor") {
 }
 ?>
 <div class="content-wrapper">
-  <section class="content-header">
+  <section class="content-header ">
     <h1>
       Reportes de ventas
     </h1>
