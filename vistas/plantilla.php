@@ -149,6 +149,9 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "cuadro" ||
          $_GET["ruta"] == "foda" ||
          $_GET["ruta"] == "comparacion" ||
+         $_GET["ruta"] == "grafico-antes" ||
+         $_GET["ruta"] == "grafico-despues" ||
+         
          $_GET["ruta"] == "salir"){
 
         include "modulos/".$_GET["ruta"].".php";
