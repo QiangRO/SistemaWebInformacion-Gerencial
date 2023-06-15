@@ -27,11 +27,14 @@ if ($_SESSION["perfil"] == "Especial") {
         <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCliente">
           Agregar cliente
         </button> -->
+        <div class="box-body">
+          <?php
+          if ($_SESSION["perfil"] == "Administrador") {
+            include "grafico-antes.php";
+          }
+          ?>
+        </div>
       </div>
-      <div class="box-body">
-
-      </div>
-    </div>
   </section>
 
   <section class="content-header">
@@ -42,83 +45,15 @@ if ($_SESSION["perfil"] == "Especial") {
   <section class="content">
     <div class="box">
       <div class="box-body">
-        <div class="col-lg-6">
-          <?php
-          if ($_SESSION["perfil"] == "Administrador") {
-            include "reportes/grafico-ventas.php";
-          }
-          ?>
-        </div>
-        <div class="col-lg-6">
-          <?php
-          if ($_SESSION["perfil"] == "Administrador") {
-            include "reportes/grafico-ventas2.php";
-          }
-          ?>
-        </div>
-        <div class="col-lg-6">
-          <?php
-          if ($_SESSION["perfil"] == "Administrador") {
-            include "reportes/grafico-ventas3.php";
-          }
-          ?>
-        </div>
-        <div class="col-lg-6">
-          <?php
-          if ($_SESSION["perfil"] == "Administrador") {
-            include "reportes/grafico-ventas4.php";
-          }
-          ?>
-        </div>
-        
-        <div class="col-lg-6">
-          <?php
-          if ($_SESSION["perfil"] == "Administrador") {
-            include "reportes/productos-mas-vendidos.php";
-          }
-          ?>
-        </div>
-        <div class="col-lg-6">
-          <?php
-          if ($_SESSION["perfil"] == "Administrador") {
-            include "reportes/productos-mas-vendidos2.php";
-          }
-          ?>
-        </div>
-        <div class="col-lg-6">
-          <?php
-          if ($_SESSION["perfil"] == "Administrador") {
-            include "reportes/productos-mas-vendidos3.php";
-          }
-          ?>
-        </div>
-        <div class="col-lg-6">
-          <?php
-          if ($_SESSION["perfil"] == "Administrador") {
-            include "reportes/productos-mas-vendidos4.php";
-          }
-          ?>
-        </div>
-        <!-- <div class="col-lg-6">
-        <?php
-        if ($_SESSION["perfil"] == "Administrador") {
-          include "inicio/productos-recientes.php";
-        }
-        ?>
-      </div> -->
         <div class="col-lg-12">
           <?php
-          if ($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor") {
-            echo '<div class="box box-success">
-            <div class="box-header">
-            <h1>Bienvenid@ ' . $_SESSION["nombre"] . '</h1>
-            </div>
-            </div>';
+          if ($_SESSION["perfil"] == "Administrador") {
+            include "grafico-despues.php";
           }
           ?>
         </div>
-      </div>
     </div>
+</div>
 </div>
 </section>
 </div>
@@ -246,28 +181,17 @@ MODAL AGREGAR CLIENTE
         <!--=====================================
         PIE DEL MODAL
         ======================================-->
-
         <div class="modal-footer">
-
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-
           <button type="submit" class="btn btn-primary">Guardar cliente</button>
-
         </div>
-
       </form>
-
       <?php
-
       $crearCliente = new ControladorClientes();
       $crearCliente->ctrCrearCliente();
-
       ?>
-
     </div>
-
   </div>
-
 </div>
 
 <!--=====================================

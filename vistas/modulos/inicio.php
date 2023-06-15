@@ -19,6 +19,17 @@ if ($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor") {
   </section>
   <section class="content">
     <div class="box">
+      <div class="col-lg-12">
+        <?php
+        if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Vendedor") {
+          echo '<div class="box box-success">
+            <div class="box-header">
+            <h1>Bienvenid@ ' . $_SESSION["nombre"] . '</h1>
+            </div>
+            </div>';
+        }
+        ?>
+      </div>
       <div class="box-header with-border">
         <div class="input-group">
           <button type="button" class="btn btn-default" id="daterange-btn2">
@@ -70,14 +81,14 @@ if ($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor") {
               }
               ?>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <?php
               if ($_SESSION["perfil"] == "Administrador") {
                 include "reportes/grafico-ventas3.php";
               }
               ?>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <?php
               if ($_SESSION["perfil"] == "Administrador") {
                 include "reportes/grafico-ventas4.php";

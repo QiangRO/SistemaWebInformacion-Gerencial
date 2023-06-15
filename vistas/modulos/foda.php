@@ -79,15 +79,6 @@ MODAL AGREGAR CATEGORÍA
                 </a>
               </div>
             </div>
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                <label for="">TERCER TRIMESTRE DEL AÑO(01-Enero-2023-- 01-Marzo-2023)</label>
-                <a class="btn btn-info" href="index.php?ruta=inicio&fechaInicial=2023-01-01&fechaFinal=2023-03-01">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
         <!--=====================================

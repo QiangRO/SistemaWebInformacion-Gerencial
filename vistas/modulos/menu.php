@@ -42,6 +42,12 @@
 						</a>
 					</li>
 					<!--<li>
+						<a href="crear-venta">
+							<i class="fa fa-shopping-cart"></i>
+							<span>Crear venta</span>
+						</a>
+					</li>-->
+					<!--<li>
 						<a href="cuadro">
 							
 							<i class="fa fa-home"></i>
@@ -107,11 +113,11 @@
 			// 	<a href="#">
 
 			// 		<i class="fa fa-list-ul"></i>
-					
+
 			// 		<span>Ventas</span>
-					
+
 			// 		<span class="pull-right-container">
-					
+
 			// 			<i class="fa fa-angle-left pull-right"></i>
 
 			// 		</span>
@@ -119,7 +125,7 @@
 			// 	</a>
 
 			// 	<ul class="treeview-menu">
-					
+
 			// 		';
 
 			// 	if ($_SESSION["perfil"] == "Administrador") {
@@ -127,7 +133,7 @@
 			// 		echo '<li>
 
 			// 			<a href="reportes">
-							
+
 			// 				<i class="fa fa-circle-o"></i>
 			// 				<span>Reporte de ventas</span>
 
